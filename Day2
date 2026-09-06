@@ -1,0 +1,18 @@
+rm file.txt    -> Remove-Item -Path "file.txt"
+rm, del, eras    -> rm, rm -i
+-r or -R         -> -Recurse
+-f             -> -Force
+passes string textx    -> passes objects
+
+rm -f   -> Remove-Item - Path "file.txt" -Force (nmot totally the same as in linus)
+
+Delete a single file:
+rm -rf /path/to/dir //removes the directory and its content immediately. -> Remove-Item -Path "C:\dir" -Recurse -Force
+rm ./log.txt  ->Remove-Item -Path "./log.txt"
+
+Force delete multiple specific file types without asking:
+rm -f *.log
+Remove-Item -Path "*.log" -Force
+
+PowerShell features a built-in safety net called -WhatIf. This outputs exactly what would have been deleted without modifying anything. Linux does not natively have this flag for rm
+Remove-Item -Path "C:\OldProject\*" -Recurse -WhatIf
