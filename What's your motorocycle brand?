@@ -1,0 +1,5 @@
+!/bin/bash
+GREETING="Hello"
+echo "What os your motorcycle breand?"
+read USER_INPUT
+echo "$GREETING, Your motorcycl name is $USER_INPUT"
